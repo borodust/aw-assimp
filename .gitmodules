@@ -1,0 +1,3 @@
+[submodule "src/lib/assimp"]
+	path = src/lib/assimp
+	url = https://github.com/borodust/assimp.git
