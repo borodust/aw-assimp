@@ -4,6 +4,15 @@
   :author "Pavel Korolev"
   :mailto "dev@borodust.org"
   :license "MIT"
+  :depends-on (:claw-assimp-bindings))
+
+
+(asdf:defsystem :claw-assimp/wrapper
+  :description "Wrapper for assimp: Open Asset Import Library"
+  :version "0.0.1"
+  :author "Pavel Korolev"
+  :mailto "dev@borodust.org"
+  :license "MIT"
   :depends-on (:claw-utils :claw)
   :pathname "src/"
   :serial t
