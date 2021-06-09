@@ -5,6 +5,11 @@ set(LIBRARY_DIR ${CMAKE_CURRENT_SOURCE_DIR}/assimp)
 set(TARGET assimp.clawed)
 
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
+set(CMAKE_SKIP_BUILD_RPATH FALSE)
+set(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
+set(CMAKE_INSTALL_RPATH "$\{ORIGIN\}")
+
 if (MSVC)
     add_compile_options(/O2)
     add_compile_options(/arch:AVX)

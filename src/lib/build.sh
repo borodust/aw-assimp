@@ -13,3 +13,4 @@ cmake -DCMAKE_C_COMPILER=clang \
       -DINJECT_DEBUG_POSTFIX=OFF \
       $WORK_DIR
 cmake --build .
+cp $BUILD_DIR/assimp/code/libassimp.so.5 $BUILD_DIR
