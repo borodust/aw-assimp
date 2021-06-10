@@ -2,15 +2,15 @@
   (:use :cl))
 (cl:in-package :assimp)
 
-(claw.wrapper:defwrapper (assimp::claw-assimp/wrapper
+(claw.wrapper:defwrapper (:aw-assimp/wrapper
                           (:headers "assimp/cimport.h"
                                     "assimp/cfileio.h"
                                     "assimp/scene.h"
                                     "assimp/postprocess.h")
                           (:includes :assimp-includes)
                           (:targets ((:and :x86-64 :linux) "x86_64-pc-linux-gnu"))
-                          (:persistent :claw-assimp-bindings
-                           :asd-path "../claw-assimp-bindings.asd"
+                          (:persistent :aw-assimp-bindings
+                           :asd-path "../aw-assimp-bindings.asd"
                            :bindings-path "../bindings/"
                            :depends-on (:claw-utils))
                           (:language :c)
