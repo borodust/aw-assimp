@@ -1032,7 +1032,7 @@
               :void
               (%assimp::sz-out (:pointer (:struct %assimp::string))))
 
-(cffi:defctype %assimp::size-t :unsigned-long)
+(cffi:defctype %assimp::size-t :unsigned-long-long)
 
 (declaim (inline %assimp::get-import-format-count))
 

@@ -10,6 +10,8 @@ set(CMAKE_SKIP_BUILD_RPATH FALSE)
 set(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
 set(CMAKE_INSTALL_RPATH "$\{ORIGIN\}")
 
+set(CMAKE_CXX_STANDARD "17")
+
 if (MSVC)
     add_compile_options(/O2)
     add_compile_options(/arch:AVX)
