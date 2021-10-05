@@ -14,6 +14,7 @@ cmake -DCMAKE_BUILD_TYPE=MinSizeRel \
       -DASSIMP_BUILD_TESTS=OFF \
       -DBUILD_DOCS=OFF \
       -DINJECT_DEBUG_POSTFIX=OFF \
+      -DASSIMP_BUILD_ZLIB=ON \
       $WORK_DIR
 cmake --build .
 cp $BUILD_DIR/assimp/code/libassimp.so.5 $BUILD_DIR

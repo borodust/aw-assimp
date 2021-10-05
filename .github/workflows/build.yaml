@@ -4,7 +4,7 @@ on:
     tags:
       - "v*.*.*"
 jobs:
-  Build:
+  build-linux:
     runs-on: ubuntu-18.04
     steps:
       - name: Check Out Everything
@@ -37,3 +37,23 @@ jobs:
           files: |
             src/lib/build/libassimp.so.5
             src/lib/build/libassimp.clawed.so
+  build-windows:
+    runs-on: windows-2019
+    steps:
+      - name: Check Out Everything
+        id: checkout
+        uses: actions/checkout@v2
+        with:
+          submodules: true
+      - name: Build Binaries
+        run: |
+          cd ${{ github.workspace }}/src/lib/
+          ./build.ps1
+      - name: Publish Binaries
+        uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          files: |
+            src/lib/build/desktop/assimp.clawed.dll
+            src/lib/build/desktop/assimp-vc142-mt.dll
