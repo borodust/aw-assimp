@@ -13,7 +13,7 @@ set(CMAKE_INSTALL_RPATH "$\{ORIGIN\}")
 set(CMAKE_CXX_STANDARD "17")
 
 if (MSVC)
-    set(TARGET_TRIPLE x86_64-pc-windows-gnu)
+    set(TARGET_TRIPLE x86_64-w64-mingw32)
     add_compile_options(/arch:AVX)
 else()
     set(TARGET_TRIPLE x86_64-pc-linux-gnu)

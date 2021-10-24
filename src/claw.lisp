@@ -10,7 +10,7 @@
                                     "assimp/postprocess.h")
                           (:includes :assimp-includes)
                           (:targets ((:and :x86-64 :linux) "x86_64-pc-linux-gnu")
-                                    ((:and :x86-64 :windows) "x86_64-pc-windows-gnu"))
+                                    ((:and :x86-64 :windows) "x86_64-w64-mingw32"))
                           (:persistent t :depends-on (:claw-utils))
                           (:language :c)
                           (:include-definitions "(ai|AI_)[A-Z]\\w*"))
