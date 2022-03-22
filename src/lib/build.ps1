@@ -38,6 +38,6 @@ cmake -G "Visual Studio 16 2019" -A x64 -Thost=x64 `
 cmake --build "$BuildDir" --config $BuildType --parallel $BuildThreadCount
 
 cp $BuildDir/$BuildType/assimp.clawed.dll $BuildDir/
-cp $BuildDir/assimp/code/$BuildType/assimp-vc142-mt.dll $BuildDir/
+cp $BuildDir/assimp/bin/$BuildType/assimp-vc142-mt.dll $BuildDir/
 
 popd

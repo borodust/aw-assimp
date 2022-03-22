@@ -65,7 +65,7 @@ function build_android {
           -DASSIMP_BUILD_ZLIB=ON \
           $WORK_DIR
     cmake --build . --config "$BUILD_TYPE"
-    cp $BUILD_DIR/assimp/code/libassimp.so $BUILD_DIR
+    cp $BUILD_DIR/assimp/bin/libassimp.so $BUILD_DIR
 }
 
 
@@ -83,7 +83,7 @@ function build_desktop {
           -DASSIMP_BUILD_ZLIB=ON \
           $WORK_DIR
     cmake --build . --config $BUILD_TYPE
-    cp $BUILD_DIR/assimp/code/libassimp.so.5 $BUILD_DIR
+    cp $BUILD_DIR/assimp/bin/libassimp.so.5 $BUILD_DIR
 }
 
 case "$REST_ARGS" in
