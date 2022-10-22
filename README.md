@@ -1,3 +1,3 @@
-# CLAW-ASSIMP
+# AW-ASSIMP
 
-WIP playground for `:claw`.
+Bindings to [Assimp](https://github.com/assimp/assimp) asset parsing library.
