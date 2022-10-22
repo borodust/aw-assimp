@@ -14,6 +14,13 @@ set(CMAKE_CXX_STANDARD "17")
 
 if (MSVC)
     set(TARGET_TRIPLE x86_64-w64-mingw32)
+
+    if (CMAKE_BUILD_TYPE STREQUAL "Debug")
+      set(CMAKE_MSVC_RUNTIME_LIBRARY MultiThreadedDebugDLL)
+    elseif()
+      set(CMAKE_MSVC_RUNTIME_LIBRARY MultiThreadedDLL)
+    endif()
+
     add_compile_options(/arch:AVX)
 else()
     if (NOT ANDROID_ABI)
